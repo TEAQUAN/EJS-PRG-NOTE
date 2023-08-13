@@ -1,0 +1,24 @@
+<%- include("layout/header.ejs") %>
+  <main>
+    <h1>Home page</h1>
+
+    <form action="/" method="post">
+        <input type="text" placeholder="enter a name of programming language" name="plName">
+        <button type="submit">Add data</button>
+    </form>
+    <ul>
+        <% if(plNames.length>0) { %>
+
+      <% for (var i = 0; i < plNames.length; i++) {  %>  
+            <li> <%= plNames[i] %></li>
+        <% } %>
+        <% }else { %>
+            <p>No data available</p>
+            <% } %>
+    </ul>
+  </main>
+  <footer>
+    <p>copyright <%= year %>  </p>
+  </footer>
+</body>
+</html>
